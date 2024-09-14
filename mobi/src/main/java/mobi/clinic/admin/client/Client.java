@@ -1,5 +1,7 @@
 package mobi.clinic.admin.client;
 
+import mobi.clinic.admin.meds.MedsManager;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -26,9 +28,12 @@ public class Client {
 
             System.out.println("Connected to the server...");
 
-            System.out.println("Enter request: ");
-            String request = in.readLine();
-            out.println(request);
+            MedsManager hey = new MedsManager();
+            hey.welcomeMenu();
+
+//            System.out.println("Enter request: ");
+//            String request = in.readLine();
+//            out.println(request);
 
             String response = in.readLine();
             System.out.println("Server response: " + response);
@@ -44,5 +49,7 @@ public class Client {
                 e.printStackTrace();
             }
         }
+
+
     }
 }
