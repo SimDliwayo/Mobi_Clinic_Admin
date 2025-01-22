@@ -12,7 +12,8 @@ public class MedsManager {
     private final ArrayList<Admin> adminProcesses = new ArrayList<>(List.of(
             new Medicines(),
             new Ambulances(),
-            new ClinicBusyness()
+            new ClinicBusyness(),
+            new Profiles()
     ));
 
 
@@ -20,7 +21,8 @@ public class MedsManager {
             "View Medicine assigned to you.",
             "Want to request an Ambulance?",
             "Is your appointment nearing? Manage Your appointments",
-            "Exit"
+            "Exit",
+            "Create your medical profile:"
     };
 
 
@@ -35,7 +37,9 @@ public class MedsManager {
     }
 
     private boolean clientUserMenu() {
+//        boolean deps = showDepartments(false);
         showDepartments(false);
+
         return mainMenu();
     }
 

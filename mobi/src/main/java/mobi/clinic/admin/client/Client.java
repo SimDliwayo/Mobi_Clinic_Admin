@@ -28,6 +28,7 @@ public class Client {
 
             System.out.println("Connected to the server...");
 
+//            System.out.println("Hey there I have initialized this object");
             MedsManager hey = new MedsManager();
             hey.welcomeMenu();
 
